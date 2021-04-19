@@ -1,11 +1,10 @@
 const toggleButton = document.getElementsByClassName('menu-desplegable')[0]
 const navbarLinks = document.getElementsByClassName('nav')[0]
 
-if (window.location.href.includes("dashboard")) {
-    toggleButton.addEventListener('click', () => {
-        navbarLinks.classList.toggle('active')
-      })
-}
+w3.includeHTML()
+toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+    })
 
 
 
@@ -119,7 +118,6 @@ if (window.location.href.includes("registro")) {
     //un if general para el dashboard y asi podemos poner todos los metodos que necesitemos
     checkForValidLoginSession()
     setUserNameOnRegistro()
-    w3.includeHTML()
 }
 
 function checkForValidLoginSession() {
