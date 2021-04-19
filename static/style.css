@@ -1,0 +1,624 @@
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+
+/*GLOBAL*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Serif:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+/*BARRA DE NAVEGACIÓN*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecera {
+    width: 100%;
+    display:flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,#122b53, #173A7C);
+    color: white;
+    left: 0%;
+    margin: 0px;
+}
+
+.empresa {
+    font-size: 1.5rem;
+    margin: 0.4rem;
+}
+
+.nav {
+    height: 100%;
+}
+
+.nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.nav li img{
+    padding-top: 10px;
+}
+
+.nav ul li ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav ul li ul{
+    position: absolute;
+}
+
+.menu-desplegable {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.menu-desplegable .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .cabecera {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .menu-desplegable {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
+    }
+
+    .nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        text-align: center;
+    }
+
+    .nav ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+}
+
+.cabecera {
+    font-family: 'PT Serif', serif;
+    font-style: italic;
+    font-weight: 700;
+}
+
+nav a:hover{
+    color:#00AEBA;
+    transition: 0.2s;
+}
+
+html {
+    background-color: rgb(230, 223, 223);
+}
+
+
+
+
+/*FOOTER*/
+
+.footer-basic {
+    padding: 16px;
+    padding-top:90px;
+    background: linear-gradient(to bottom,#0d2042  0px,#173A7C);
+    color: white;
+    font-size:medium;
+    font-family: 'Montserrat', sans-serif;
+    clip-path: polygon(0% 0%, 0% 0%, 100% 30%, 100% 100%, 0% 100%);
+    background-color: transparent;
+}
+
+footer{
+    background-color:transparent;
+    width: 100%;
+}
+
+.footer-left{
+    max-width: 100%;
+    margin-inline-start: 26.5%;
+    margin-inline-end: 20%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-basic header{
+    font-weight: bold;
+    padding-block: 16px;
+    color: white;
+}
+
+.footer-left a{
+    display: block;
+    padding-block: 12px;
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.footer-left a:hover{
+    color: #00AEBA;
+    font-size: 17px;
+    transition: 0.2s;
+}
+
+.footer-basic .social {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0px;
+    
+}
+
+.footer-basic .social > a {
+    font-size:24px;
+    max-width:50px;
+    max-height:50px;
+    display:inline-block;
+    text-align:center;
+    /*border-radius:50%;
+    border:1px solid #ccc;
+    margin: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    color:inherit;
+    opacity:0.75;*/
+}
+
+.footer-basic .social > a:hover {
+    opacity:0.9;
+    color: #00AEBA;
+    font-size: 17px;
+}
+
+.footer-basic .copyright {
+margin-top:15px;
+padding-bottom: 10px;
+text-align:center;
+font-size:14px;
+color: white;
+margin-bottom:0;
+}
+
+
+
+
+/*SALUDO AL USER*/
+.saludo-user{
+    color: black;
+    background-color: #e6dfdf;
+    text-align: center;
+    position: absolute;
+    display: block;
+    top: 20 px;
+    right: 20px;
+    max-width: 200px;
+    padding: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+
+
+/*INICIO*/
+
+.main-picture{
+    background-color: white;
+    background-image: url(../static/images/fondo1.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+    padding-bottom: 80px;
+}
+
+.main-picture img{
+    max-width:40%;
+    max-height:40%;
+    object-fit: cover;
+    border-radius:100%;
+    box-shadow: 0 40px 40px rgba(0, 0, 0, 0.7);
+}
+
+
+.promociones {
+    background-color: #00a3fc;
+    background-image: url(../static/images/burbujas.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+
+.promociones h2{
+    background-color: #00a3fc;
+    padding: 10px;
+}
+
+.promociones img{
+    background-color: #00a3fc;
+    max-width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.location-plugin {
+    background: linear-gradient(to bottom,white  0px,#e6dfdf);
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 60px;
+    position: relative;
+    max-height: 100%;
+    text-align: center;
+}
+
+.location-plugin-text{
+    color:black;
+    padding: 30px;
+    text-align: center;
+}
+
+.location-plugin p {
+    margin: auto;
+    max-width: 50%;
+}
+
+.location-plugin iframe{
+    border: none;
+    align-items: center;
+    width: 60%;
+    height: 400px;
+    overflow: scroll;
+}
+
+
+
+
+/*TRATAMIENTOS*/
+
+ 
+
+.title-heading {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+.product {
+    background-image: linear-gradient(to bottom,white  0px,#e6dfdf);
+    padding: 3rem 0;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: auto;
+  }
+
+
+  .has-margin-right {
+    margin: 0 3rem 0 0;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1.45rem 5rem 1.45rem;
+  }
+  
+  .product-img {
+    flex: 1;
+  }
+  
+  .product-description {
+    flex: 1;
+    text-align: center;
+  }
+  
+  
+
+
+  
+  /* CONÓCENOS */
+  
+  .about-us {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    }
+
+    .about-title {
+        text-align: center;
+        padding: 30px;
+    }
+
+    .mision-vision-titles {
+        display: flex;
+    }
+
+    .mision-vision-titles h2 {
+        flex: 1;
+        text-align:center;
+    }
+
+    .mision-vision-text {
+        display: flex;
+    }
+
+    .mision-vision-text p {
+        flex: 1;
+        text-align:center;
+    }
+
+    .valores {
+        text-align: center;
+        padding: 30px;
+    }
+
+    .team{
+        padding: 50px;
+        background: linear-gradient(to bottom,white  0px,#e6dfdf);
+        text-align: center;
+        position: relative;
+    }
+
+    .team li{
+        list-style: none;
+    }
+
+
+
+
+
+/* REGISTRO */
+
+.caja{
+    max-width: 30%;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom,#0d2042, #173A7C);
+    padding: 60px 45px;
+    position:absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    border-style:inset;
+    box-shadow: 0px 0px 20px 0px black;
+}
+.caja-titulo {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 40px;
+    color: #00AEBA;
+    font-weight: bold;
+}
+
+.caja-link {
+    text-align: center;
+    font-size: 15px;
+    color: #00AEBA;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.caja-link a{
+    color: #00AEBA;
+    font-weight: bold;
+    text-decoration: none;
+    transition:  .4s;
+}
+
+.caja-link a:hover{
+   color: #018d97;
+}
+
+.caja-inputs{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.caja-inputs i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 15px;
+    color:#00AEBA;
+}
+
+::-webkit-input-placeholder{
+    color:rgb(109, 106, 106);
+}
+
+.caja-input{
+    width: 100%;
+    padding:12px;
+    padding-left: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.caja-boton-css{
+    width: 55%;
+    margin: 19px auto 0;
+    background:#feb40a;
+    text-align: center;
+    padding: 12px;
+    border-radius: 20px;
+    position:relative;
+    left: 23%;
+    border-style: none;
+    color:#69572b;
+    font-weight: bold;
+    transition: transform .4s;
+    cursor:pointer;
+}
+
+.caja-boton-css:hover{
+    background:#fdbb20;
+    transition: transform 0.5s;
+    transform: scale(1.12);
+}
+
+
+/* CITA */
+
+
+.caja-cita {
+    max-width: 40%;
+    min-width: 320px;
+    width: auto;
+    height: auto;
+    background: linear-gradient(to bottom,#0d2042, #173A7C);
+    padding: 40px 70px;
+    position: relative;
+    left: 46.2%;
+    margin: 45px;
+    transform: translate(-50%, -0);
+    border-radius: 40px;
+    border-style:inset;
+    box-shadow: 0px 0px 20px 0px black;
+}
+
+.cajaci-input{
+    width: 100%;
+    padding:12px;
+    padding-left: 30px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.caja-inputs label{
+    color:#00AEBA;
+}
+
+.caja-inputs textarea{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.caja-inputs h2{
+    color:#00AEBA;
+}
+
+.caja-inputs table{
+    color: #69572b;
+    background-color: #fdbb20;
+    border-radius: 0px;
+    text-align:center;
+    max-width: 100%;
+    border-style: inset;
+    border: "1";
+    position: relative;
+    margin: auto;
+}
+
+
+.caja-cita .caja-titulo{
+    font-size:x-large;
+}
+
+
+/* CONTACTO */
+
+.caja-contacto {
+    max-width: 40%;
+    min-width: 320px;
+    width: auto;
+    height: auto;
+    background: linear-gradient(to bottom,#0d2042, #173A7C);
+    padding: 40px 70px;
+    position: relative;
+    left: 46.2%;
+    margin: 45px;
+    transform: translate(-50%, -0);
+    border-radius: 40px;
+    border-style:inset;
+    box-shadow: 0px 0px 20px 0px black;
+}
+
+.caja-contacto .caja-titulo{
+    font-size:x-large;
+}
+
+
+
+/* MI CUENTA */
+
+.caja-cuenta {
+    max-width: 80%;
+    min-width: 320px;
+    width: auto;
+    height: auto;
+    background: linear-gradient(to bottom,#0d2042, #173A7C);
+    padding: 40px 70px;
+    position: relative;
+    left: 46.2%;
+    margin: 45px;
+    transform: translate(-50%, -0);
+    border-radius: 40px;
+    border-style:inset;
+    box-shadow: 0px 0px 20px 0px black;
+}
