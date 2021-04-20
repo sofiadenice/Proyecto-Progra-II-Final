@@ -51,6 +51,17 @@ body {
 .empresa {
     font-size: 1.5rem;
     margin: 0.4rem;
+    cursor:pointer;
+}
+
+.empresa a{
+    text-decoration: none;
+    color: white;
+}
+
+.empresa:hover{
+    color:#00AEBA;
+    transition: 0.2s;
 }
 
 .nav {
@@ -168,19 +179,6 @@ html {
 }
 
 
-/*footer{
-    background-color:transparent;
-    width: 100%;
-}*/
-
-/*.footer-left{
-    max-width: 100%;
-    margin-inline-start: 26.5%;
-    margin-inline-end: 20%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-*/
 .footer-basic header{
     font-weight: bold;
     padding-block: 16px;
@@ -236,13 +234,14 @@ html {
 }
   
   /* Responsive layout - makes a one column layout instead of a two-column layout */
+  /*
 @media (max-width: 500px) {
     .footer-left {
       flex-direction: column;
       max-width: 100%;
       text-align: center;
     }
-  }
+  }*/
 
 .footer-basic .copyright {
 margin-top:15px;
@@ -514,12 +513,12 @@ h3 {
 
 
 .tratamiento-description{
-    max-width: 605px;
+    max-width: 570px;
     margin: 20px;
 }
 
 .tratamiento-img img{
-    max-width: 100%;
+    max-width: 90%;
     margin: 20px;
 }
 
