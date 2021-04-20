@@ -13,33 +13,37 @@
 </head>
 
 <body>
-    <div class="caja-body">
-        <section>
-            <div class="caja">
-                <div class="caja-titulo">
-                    Acceder
+    <div class="fondo-general">
+        <br>
+        <div class="caja-body">
+            <section>
+                <div class="caja">
+                    <div class="caja-titulo">
+                        Acceder
+                    </div>
+                    
+                    <div class="caja-campos">
+                        <div class="caja-inputs">
+                            <input type="text" name="user" id="user" placeholder="Usuario..." class ="caja-input">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="caja-inputs">
+                            <input type="text" name="passw" id="passw" placeholder="Contraseña..." class ="caja-input">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="caja-boton">
+                            <button onclick="checkLogin()" class="caja-boton-css">Iniciar sesión</button>
+                        </div>
+                        <div class = "caja-link">
+                            ¿No tienes una cuenta?<br display="none">
+                            <a href="{{url_for('register')}}">Regístrate</a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="caja-campos">
-                    <div class="caja-inputs">
-                        <input type="text" name="user" id="user" placeholder="Usuario..." class ="caja-input">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="caja-inputs">
-                        <input type="text" name="passw" id="passw" placeholder="Contraseña..." class ="caja-input">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class="caja-boton">
-                        <button onclick="checkLogin()" class="caja-boton-css">Iniciar sesión</button>
-                    </div>
-                    <div class = "caja-link">
-                        ¿No tienes una cuenta?
-                        <a href="{{url_for('register')}}">Regístrate</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div> 
+            </section>
+        </div> 
+        <br>
+    </div>
 
     <script src="{{url_for('static', filename='script.js')}}"></script>
 </body>

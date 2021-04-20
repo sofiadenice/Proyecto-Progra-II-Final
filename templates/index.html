@@ -72,18 +72,18 @@
 <footer>
     <div class="footer-basic">
         <div class="footer-left">
-            <section>
+            <section class="footer-sections">
                 <header>Nosotros</header>
                 <a href="#" onclick="hideDivById('about')">Conócenos</a>
                 <a href="#" onclick="hideDivById('contacto')">Contacto</a>
                 <a href="#" onclick="hideDivById('inicio')">Inicio</a>
             </section>
-            <section>
+            <section class="footer-sections">
                 <header>Servicios</header>
                 <a href="#" onclick="hideDivById('productos')">Tratamientos</a>
                 <a href="#" onclick="hideDivById('cita')">Haz tu cita</a>
             </section>
-            <section>
+            <section class="footer-sections">
                 <header>Nuestra redes</header>
                 <div class="social">
                     <a href="https://www.facebook.com/clinicadentalclidente/"><span class="iconify" data-icon="ant-design:facebook-filled" data-inline="false"></span></a>
@@ -100,6 +100,7 @@
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="/static/script.js"></script>
+    <script src="{{url_for('static', filename='pre_load.js')}}"></script>
 </body>
 
 </html>

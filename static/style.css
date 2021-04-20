@@ -136,6 +136,7 @@ body {
     .nav.active {
         display: flex;
     }
+
 }
 
 .cabecera {
@@ -160,28 +161,26 @@ html {
 
 .footer-basic {
     padding: 16px;
-    padding-top:90px;
     background: linear-gradient(to bottom,#0d2042  0px,#173A7C);
     color: white;
     font-size:medium;
     font-family: 'Montserrat', sans-serif;
-    clip-path: polygon(0% 0%, 0% 0%, 100% 30%, 100% 100%, 0% 100%);
-    background-color: transparent;
 }
 
-footer{
+
+/*footer{
     background-color:transparent;
     width: 100%;
-}
+}*/
 
-.footer-left{
+/*.footer-left{
     max-width: 100%;
     margin-inline-start: 26.5%;
     margin-inline-end: 20%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-
+*/
 .footer-basic header{
     font-weight: bold;
     padding-block: 16px;
@@ -202,33 +201,48 @@ footer{
     transition: 0.2s;
 }
 
-.footer-basic .social {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 0px;
-    
-}
-
 .footer-basic .social > a {
     font-size:24px;
     max-width:50px;
     max-height:50px;
     display:inline-block;
     text-align:center;
-    /*border-radius:50%;
-    border:1px solid #ccc;
-    margin: auto;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
     color:inherit;
-    opacity:0.75;*/
+    opacity:0.75;
 }
 
 .footer-basic .social > a:hover {
     opacity:0.9;
     color: #00AEBA;
-    font-size: 17px;
+    font-size: 30px;
 }
+
+.footer-sections{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 210px;
+}
+
+.footer-left {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+}
+  
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 500px) {
+    .footer-left {
+      flex-direction: column;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
 
 .footer-basic .copyright {
 margin-top:15px;
@@ -240,22 +254,21 @@ margin-bottom:0;
 }
 
 
-
-
-/*SALUDO AL USER
+SALUDO AL USER
 .saludo-user{
     color: black;
-    background-color: #e6dfdf;
+    background-color: red;
     text-align: center;
     position: absolute;
     display: block;
-    top: 20 px;
+    top: 20px;
     right: 20px;
     max-width: 200px;
     padding: 10px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-}*/
+    visibility: hidden;
+}
 
 
 
@@ -648,19 +661,22 @@ h3 {
 /* REGISTRO */
 
 .caja-body{
-    background-color: white;
+   /* background-color: white;*/
 }
 
 .caja{
     max-width: 30%;
     width: 100%;
-    height: auto;
+    /*height: auto;*/
     background: linear-gradient(to bottom,#0d2042, #173A7C);
     padding: 60px 45px;
-    position:absolute;
-    top: 300px;
+    position:relative;
+    /*top: 300px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
+    margin: auto;
+    margin-top: 80px;
+    vertical-align: middle;
     border-radius: 40px;
     border-style:inset;
     box-shadow: 0px 0px 20px 0px black;
@@ -720,21 +736,22 @@ h3 {
 .caja-boton-css{
     width: 55%;
     margin: 19px auto 0;
-    background:#feb40a;
+    background-image: linear-gradient(60deg, #00AEBA, #3ab31b, #fdbb20);
     text-align: center;
     padding: 12px;
     border-radius: 20px;
     position:relative;
     left: 23%;
     border-style: none;
-    color:#69572b;
+    color:white;
     font-weight: bold;
     transition: transform .4s;
     cursor:pointer;
 }
 
 .caja-boton-css:hover{
-    background:#fdbb20;
+    background-image: linear-gradient(60deg, #00AEBA, #3ab31b, #fdbb20);
+    color:white;
     transition: transform 0.5s;
     transform: scale(1.12);
 }
@@ -790,7 +807,7 @@ h3 {
 .caja-inputs h2{
     color:#00AEBA;
 }
-
+/*
 .caja-inputs table{
     color: #69572b;
     background-color: #fdbb20;
@@ -801,7 +818,7 @@ h3 {
     border: "1";
     position: relative;
     margin: auto;
-}
+}*/
 
 
 .caja-cita .caja-titulo{
@@ -849,4 +866,66 @@ h3 {
     border-radius: 40px;
     border-style:inset;
     box-shadow: 0px 0px 20px 0px black;
+}
+
+/*
+.caja-inputs table{
+    color: #69572b;
+    background-color: #fdbb20;
+    border-radius: 0px;
+    text-align:center;
+    max-width: 100%;
+    border-style: inset;
+    border: "1";
+    position: relative;
+    margin: auto;
+}*/
+
+/* FORMATO DE TABLAS*/
+
+.tabla{
+    border-radius: 0px;
+    text-align:center;
+    max-width: 100%;
+    /*border-style: inset;
+    border: "1";*/
+    /*position: relative;*/
+    overflow-x: auto;
+    margin-top: 30px;
+}
+.tabla table{
+    color: black;
+    /*background-color: linear-gradient(60deg, #00AEBA, #3ab31b, #fdbb20);
+    border-collapse: collapse;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(60deg, #00AEBA, #3ab31b, #fdbb20);*/
+    margin: auto;
+    background-image: linear-gradient(60deg, #00AEBA, #3ab31b, #fdbb20); /* the gradient */
+    background-origin: border-box; /* set background to start from border-box */
+    border-spacing: 5px; /* space between each cell */
+    border: 5px solid transparent; /* optional */
+    
+}
+
+.tabla th{
+    color: white;
+}
+.tabla td{
+    background: white;
+}
+
+/* FONDO DE LOGIN, REGISTER Y  MI CUENTA*/
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+.fondo-general{
+    background-color: white;
+    background-image: url(../static/images/fondo1.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
 }
