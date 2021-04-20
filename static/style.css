@@ -332,8 +332,8 @@ h3 {
 }
 
 .main-picture img{
-    max-width:40%;
-    max-height:40%;
+    max-width: 40%;
+    min-width: 175px;
     object-fit: cover;
     border-radius:100%;
     box-shadow: 0 40px 40px rgba(0, 0, 0, 0.7);
