@@ -181,6 +181,11 @@ function logout() {
     //window.location.href = "https://proyecto-programacion-dos.herokuapp.com/";
 }
 
+function goToIndex() {
+    window.location.href = "http://127.0.0.1:5000/"
+    //window.location.href = "https://proyecto-programacion-dos.herokuapp.com/";
+}
+
 /*
 ************* dashboard functionality end
 */
@@ -197,6 +202,21 @@ if (window.location.href.includes("registro")) {
         const observer = new MutationObserver(function () {
             var currentLoggedUser = getCurrentLoggedUser()
             loadAddDataFromAllUsers()
+            observer.disconnect()
+        });
+
+        observer.observe(elementToObserve, { subtree: true, childList: true });
+    }
+}
+
+if (window.location.href.includes("registro")) {
+    var currentLoggedUser = getCurrentLoggedUser()
+    if (currentLoggedUser.role === "admin") {
+
+        const elementToObserve = document.getElementById("admin")
+
+        const observer = new MutationObserver(function () {
+            var currentLoggedUser = getCurrentLoggedUser()
             loadAddDataFromTratamiento()
             observer.disconnect()
         });
