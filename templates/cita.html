@@ -8,11 +8,13 @@
     <title>Clidente | Citas</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/logo.ico" />
 </head>
 
 <body>
     <div class="caja-section">
-        <div class="caja-cita">
+        <br>
+        <section class="caja-cita">
             <div class="caja-titulo">
                 Reserva tu cita
             </div>
@@ -56,6 +58,7 @@
                             <option value="hora6">3:00 PM - 4:00 PM</option>
                             <option value="hora7">4:00 PM - 5:00 PM</option>
                         </select>
+                    </div>
                     <div class="caja-boton">
                         <button type="button" onclick="agregarCita()" class="caja-boton-css">Enviar</button>
                     </div>
@@ -74,7 +77,9 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </section>
+        <br>
+        <br>
     </div>
 </body>
 

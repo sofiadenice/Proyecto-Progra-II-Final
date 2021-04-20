@@ -16,9 +16,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Serif:ital,wght@0,700;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
 * {
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 
@@ -138,7 +140,7 @@ body {
 
 .cabecera {
     font-family: 'PT Serif', serif;
-    font-style: italic;
+    font-style: none;
     font-weight: 700;
 }
 
@@ -240,7 +242,7 @@ margin-bottom:0;
 
 
 
-/*SALUDO AL USER*/
+/*SALUDO AL USER
 .saludo-user{
     color: black;
     background-color: #e6dfdf;
@@ -253,19 +255,77 @@ margin-bottom:0;
     padding: 10px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+}*/
+
+
+
+/*FORMATO DE H1 Y H2*/
+
+
+* h1{
+    margin: auto;
+    font-size: 40px;
+    color: #00AEBA;
+    text-align: center;
+    padding: 30px;
 }
 
+.container-h2{
+    margin: auto;
+}
+
+.container-h2{
+    position: relative;
+    top: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+    background-color: #3ab31b;
+    background-image: linear-gradient(60deg, #00AEBA, #3ab31b, #fdbb20);
+    border-radius: 30px;
+    max-width: 600px;
+    max-height: 90px;
+    vertical-align: middle;
+    padding: 3px;
+}
+
+.container-h2 h2{
+    max-width: 100%;
+    color: white;
+}
+
+h3 {
+  text-align: center;
+  color: #0d2042;
+  margin: 15px;
+  /*background: -webkit-linear-gradient(60deg, #00AEBA, #3ab31b, #fdbb20);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+}
+
+.line{
+    margin: auto;
+    align-items: center;
+    max-width:180px;
+    height : 5px;
+    /*margin : 0 5px;*/
+    background: -webkit-linear-gradient(60deg, #00AEBA, #3ab31b, #fdbb20);
+    -webkit-text-fill-color: transparent;
+}
 
 
 
 /*INICIO*/
 
-.main-picture{
+
+.inicio {
     background-color: white;
     background-image: url(../static/images/fondo1.png); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.main-picture{
     text-align: center;
     padding: 50px;
     padding-bottom: 80px;
@@ -279,37 +339,80 @@ margin-bottom:0;
     box-shadow: 0 40px 40px rgba(0, 0, 0, 0.7);
 }
 
+.inicio-promos{
+    margin: auto;
+    background-color: #163878;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
 
-.promociones {
-    background-color: #00a3fc;
-    background-image: url(../static/images/burbujas.png); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+/*
+.inicio-promos-secciones{
+    display: flex;
+}
+
+.inicio-promos-secciones section {
+    flex: 1;
+    text-align:center;
+}*/
+.promociones-right {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+}
+  
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .promociones-right {
+      flex-direction: column;
+      max-width: 100%;
+    }
+  }
+
+
+.promociones-img img{
+    max-width:90%;
+    padding: 20px;
+}
+
+.facebook-plugin {
     position: relative;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
-.promociones h2{
-    background-color: #00a3fc;
-    padding: 10px;
+.facebook-plugin p{
+    text-align: center;
+    max-width: 350px;
+    color: white;
 }
 
-.promociones img{
-    background-color: #00a3fc;
-    max-width: 40%;
-    padding: 10px;
-    border-radius: 10px;
+.facebook-plugin iframe{
+    max-width: 100%;
+    padding: 20px;
+    border: none;
+    margin: auto;
+    align-items: center;
+    height: 410px;
+    overflow: scroll;
 }
 
 
 .location-plugin {
-    background: linear-gradient(to bottom,white  0px,#e6dfdf);
-    padding-top: 10px;
+    background: white;
+    padding-top: 0px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
     position: relative;
     max-height: 100%;
     text-align: center;
@@ -317,7 +420,7 @@ margin-bottom:0;
 
 .location-plugin-text{
     color:black;
-    padding: 30px;
+    padding: 50px;
     text-align: center;
 }
 
@@ -329,7 +432,7 @@ margin-bottom:0;
 .location-plugin iframe{
     border: none;
     align-items: center;
-    width: 60%;
+    width: 65%;
     height: 400px;
     overflow: scroll;
 }
@@ -337,100 +440,216 @@ margin-bottom:0;
 
 
 
-/*TRATAMIENTOS*/
 
+
+/*TRATAMIENTOS*/
  
 
 .title-heading {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    padding-top: 40px;
   }
 
 .product {
-    background-image: linear-gradient(to bottom,white  0px,#e6dfdf);
-    padding: 3rem 0;
-    min-height: 100vh;
-    max-width: 100%;
-    margin: auto;
+    background-color: white;
+    /*background-image: linear-gradient(to bottom,white  0px,#e6dfdf);*/
   }
 
 
-  .has-margin-right {
-    margin: 0 3rem 0 0;
-  }
-  
-  .product-item {
+.tratamiento-right {
+    position: relative;
     display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    margin: 20px;
+    padding: 10px;
     align-items: center;
     justify-content: center;
-    margin: 0 1.45rem 5rem 1.45rem;
-  }
-  
-  .product-img {
-    flex: 1;
-  }
-  
-  .product-description {
-    flex: 1;
     text-align: center;
+    max-width: 100%;
+}
+  
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .tratamiento-right {
+      flex-direction: column;
+      max-width: 100%;
+    }
   }
-  
-  
+
+
+.tratamiento-left {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-flow: row-reverse wrap;
+    margin: 20px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+}
+
+@media (max-width: 800px) {
+    .tratamiento-left {
+      flex-direction: column;
+      max-width: 100%;
+    }
+  }
+
+
+.tratamiento-description{
+    max-width: 605px;
+    margin: 20px;
+}
+
+.tratamiento-img img{
+    max-width: 100%;
+    margin: 20px;
+}
+
+
+
+.tratamientos-extras {
+    background-color: white;
+    padding: 60px;
+}
+
+
+
+
 
 
   
   /* CONÓCENOS */
   
-  .about-us {
+.about-us {
     background-color: white;
     color: black;
     padding: 20px;
-    }
+}
 
-    .about-title {
-        text-align: center;
-        padding: 30px;
-    }
+.about-title {
+    text-align: center;
+    padding: 30px;
+}
 
-    .mision-vision-titles {
-        display: flex;
+.mision-vision-right {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+}
+    
+    /* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .mision-vision-right {
+        flex-direction: column;
+        max-width: 100%;
     }
+}
 
-    .mision-vision-titles h2 {
-        flex: 1;
-        text-align:center;
-    }
+.mision {
+    padding: 20px;
+}
 
-    .mision-vision-text {
-        display: flex;
-    }
+.mision p {
+    max-width: 600px;
+    text-align:center;
+}
 
-    .mision-vision-text p {
-        flex: 1;
-        text-align:center;
-    }
+.vision {
+    padding: 20px;
+}
 
-    .valores {
-        text-align: center;
-        padding: 30px;
-    }
+.vision p {
+    max-width: 600px;
+    text-align:center;
+}
 
-    .team{
-        padding: 50px;
-        background: linear-gradient(to bottom,white  0px,#e6dfdf);
-        text-align: center;
-        position: relative;
-    }
 
-    .team li{
-        list-style: none;
+.valores {
+    text-align: center;
+    padding: 20px;
+}
+
+.team{
+    padding: 50px;
+    background: white;
+    text-align: center;
+    position: relative;
+}
+
+.team li{
+    list-style: none;
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+
+.team p{
+    list-style: none;
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.team img{
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border-radius: 100%;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.7);
+}
+
+.doctor{
+    padding: 10px;
+    max-width: 400px;
+    margin: auto;
+    vertical-align: top;
+    align-items: initial;
+}
+
+.team-right {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    margin: 5px;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+}
+  
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .team-right {
+      flex-direction: column;
+      max-width: 100%;
     }
+  }
+
+
+
 
 
 
 
 
 /* REGISTRO */
+
+.caja-body{
+    background-color: white;
+}
 
 .caja{
     max-width: 30%;
@@ -522,6 +741,15 @@ margin-bottom:0;
 
 
 /* CITA */
+
+
+.caja-section{
+    background-color: white;
+    background-image: url(../static/images/fondo1.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 
 .caja-cita {

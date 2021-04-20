@@ -6,21 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/logo.ico" />
     <title>Inicio</title>
 </head>
 
 
 <body>
-    <div class="main-picture" id="main-picture">
-        <img src="/static/images/main1.jpg" alt="Dientes sanos">
+    <div class="inicio">
+        <div class="main-picture" id="main-picture">
+            <img src="/static/images/main1.jpg" alt="Dientes sanos">
+        </div>
     </div>
-    <div class="promociones" id="promociones">
-        <h2>¡Disfruta de nuestra promoción del mes!</h2>
-        <img src="/static/images/promo1.jpg" alt="Promoción 2x1">
-    </div>
+        <div class="inicio-promos" style="border:thin">
+            <div class="container-h2"><h2>¡Disfruta de nuestra promoción del mes!</h2></div>
+            
+
+            <section class="promociones-right">
+                <div class="promociones-img">
+                    <img src="/static/images/promo1.jpg" alt="Promoción 2x1">
+                </div>
+                <div class="facebook-plugin">
+                    <p>También puedes visitar nuestra página de facebook para estar enterado de todas nuestras promociones y más</p>
+                    <div class="line"></div>
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fclinicadentalclidente%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId">
+                    </iframe>
+                </div>
+            </section>
+
+            <!--
+            <div class="inicio-promos-secciones">
+                <section class="promociones" id="promociones">
+                    <img src="/static/images/promo1.jpg" alt="Promoción 2x1">
+                </section>
+                <section class="facebook-plugin" id="facebook-plugin">
+                    <p>También puedes visitar nuestra página de facebook para estar enterado de todas nuestras promociones y más</p>
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fclinicadentalclidente%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId">
+                    </iframe>
+                </section>
+            </div>
+            -->
+        </div>
     <div class="location-plugin" id="location-plugin">
         <div class="location-plugin-text">
-            <h2>Nuestra ubicación</h2>
+            <div class="container-h2"><h2>Nuestra ubicación</h2></div>
             <p>Visita nuestras instalaciones en 2da Calle Pte. y 2da av. Sur Centro
                 Comercial Portal Plaza nº 21. Segunda planta. Santa Tecla, El Salvador</p>
         </div>
@@ -33,14 +63,7 @@
     </div>
 
     <!-- 
-    <div class="facebook-plugin" id="facebook-plugin">
-        <h2>Nuestro Facebook</h2>
-        <iframe
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fclinicadentalclidente%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-            width="340" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-            allowtransparency="true" allow="encrypted-media">
-        </iframe>
-    </div>
+    
     -->
 </body>
 
