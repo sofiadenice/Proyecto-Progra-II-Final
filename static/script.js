@@ -38,6 +38,29 @@ function registerNewUser() {
     window.location.href = "https://proyecto-progra-2-final.herokuapp.com/login";
 }
 
+function agregarAdmin() {
+    var reg_user = document.getElementById("nombreA").value;
+    var reg_password = document.getElementById("contraA").value;
+    var reg_role = "admin";
+
+    //alert(reg_user);
+    var userArray = [];
+
+    if (localStorage.getItem("lUserArray") !== null) {
+        userArray = JSON.parse(localStorage.getItem("lUserArray"));
+    }
+
+    var current_reg = {
+        user: reg_user,
+        password: reg_password,
+        role: reg_role
+    };
+
+    userArray.push(current_reg);
+
+    localStorage.setItem("lUserArray", JSON.stringify(userArray));
+
+}
 /*
 ************* login functionality begin
 */
