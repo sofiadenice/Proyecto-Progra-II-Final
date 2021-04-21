@@ -626,11 +626,12 @@ function agregarTratamiento(){
     var nombre = document.getElementById("nombreT").value
     var descripcion = document.getElementById("descripcionT").value
     var imagen = document.getElementById("imagenT").value
+    var imagenA = "<img src='"+imagen+"'>"
     
     cleanFormTratamientos()
     //alert(fecha)
     //addResultToTratamientoTable(nombre,descripcion, imagen)
-    addResultToTratamientoStorage(nombre,descripcion, imagen)
+    addResultToTratamientoStorage(nombre,descripcion, imagenA)
     return
     //alert("Pausa")
 }
