@@ -34,8 +34,8 @@ function registerNewUser() {
 
     localStorage.setItem("lUserArray", JSON.stringify(userArray));
 
-    window.location.href = "http://127.0.0.1:5000/login"
-    //window.location.href = "https://proyecto-programacion-dos.herokuapp.com/login";
+    //window.location.href = "http://127.0.0.1:5000/login"
+    window.location.href = "https://proyecto-progra-2-final.herokuapp.com/login";
 }
 
 /*
@@ -56,8 +56,8 @@ function checkLogin() {
                 //need a method to get the role and send it into createSessionUser below
                 var role = getUserRole(user, password, userArray)
                 createSessionUser(user, password, role)
-                window.location.href = "http://127.0.0.1:5000/dashboard";
-                //window.location.href = "https://proyecto-programacion-dos.herokuapp.com/dashboard";
+                //window.location.href = "http://127.0.0.1:5000/dashboard";
+                window.location.href = "https://proyecto-progra-2-final.herokuapp.com/dashboard";
             } else {
                 alert("Usuario o contraseña no son correctos");
             }
@@ -129,8 +129,8 @@ function checkForValidLoginSession() {
 
     if (sessionStorage.getItem("loggedUser") == null) {
         alert("Debe iniciar sesión para acceder a la página");
-        window.location.href = "http://127.0.0.1:5000/login";
-        //window.location.href = "https://proyecto-programacion-dos.herokuapp.com/login";
+        //window.location.href = "http://127.0.0.1:5000/login";
+        window.location.href = "https://proyecto-progra-2-final.herokuapp.com/login";
     }
 }
 
@@ -177,13 +177,13 @@ function modifyRegistroForRole(pCurrentRole) {
 
 function logout() {
     sessionStorage.removeItem("loggedUser")
-    window.location.href = "http://127.0.0.1:5000/"
-    //window.location.href = "https://proyecto-programacion-dos.herokuapp.com/";
+    //window.location.href = "http://127.0.0.1:5000/"
+    window.location.href = "https://proyecto-progra-2-final.herokuapp.com/";
 }
 
 function goToIndex() {
-    window.location.href = "http://127.0.0.1:5000/"
-    //window.location.href = "https://proyecto-programacion-dos.herokuapp.com/";
+    //window.location.href = "http://127.0.0.1:5000/"
+    window.location.href = "https://proyecto-progra-2-final.herokuapp.com/";
 }
 
 /*
@@ -603,12 +603,11 @@ function agregarTratamiento(){
     var nombre = document.getElementById("nombreT").value
     var descripcion = document.getElementById("descripcionT").value
     var imagen = document.getElementById("imagenT").value
-    var imagena = "<img src='"+imagen+"'>"
     
     cleanFormTratamientos()
     //alert(fecha)
     //addResultToTratamientoTable(nombre,descripcion, imagen)
-    addResultToTratamientoStorage(nombre,descripcion, imagena)
+    addResultToTratamientoStorage(nombre,descripcion, imagen)
     return
     //alert("Pausa")
 }
@@ -651,6 +650,7 @@ function addResultToTratamientoStorage(nombre,descripcion, imagen){
     addTratamientoArray.push(current_add_tratamiento)
     localStorage.setItem("lAddTratamientoArray", JSON.stringify(addTratamientoArray));
 }
+
 function loadAddDataFromTratamiento() {
     
     var addTratamientoArray = []
@@ -763,39 +763,5 @@ function modifyOffElementByIndexT(pIndexT, pSave) {
         document.getElementById("columna4"+pIndexT).innerHTML = "<button onclick='modifyOnElementByIndexT(" + pIndexT + ")'>modify</button><input type='hidden' id='"+ pIndexT + "'>";
 
         localStorage.setItem("lAddTratamientoArray", JSON.stringify(addResultArrayT))
-    }
-}
-//------------------------------------------------------------------------------
-function loadAddDataFromTratamientoClient() {
-    
-    var addTratamientoArray = []
-    
-    if (localStorage.getItem("lAddTratamientoArray") !== null) {
-        addTratamientoArray = JSON.parse(localStorage.getItem("lAddTratamientoArray"));
-    }
-
-    var tableTratamientos = document.getElementById("tableTratamientos")
-    var row
-    var indexT = 0;
-    //var tableIndex = addResultArray
-    
-
-    //var addResultArrayT = JSON.parse(localStorage.getItem("lAddTratamientoArray"))
-    //var longT = addResultArrayT.length
-
-    var x = document.getElementById("tableTratamientos").rows.length;
-
-    if (x>1){
-        for (var i=1; i < x; i++ ){
-            document.getElementById("tableTratamientos").deleteRow(i)
-        }
-    }
-    for (var addResult of addTratamientoArray) {
-        row = tableTratamientos.insertRow(1)
-
-        row.insertCell(0).innerHTML = "<span id= 'columna1"+indexT+"'>" + addResult.nombreT+"</span>";
-        row.insertCell(1).innerHTML = "<span id= 'columna2"+indexT+"'>" + addResult.descripcionT+"</span>";
-        row.insertCell(2).innerHTML = "<span id= 'columna3"+indexT+"'>" + addResult.imagenT +"</span>";
-        indexT++
     }
 }
