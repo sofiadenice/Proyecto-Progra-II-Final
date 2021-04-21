@@ -25,7 +25,7 @@
         <div name="linkers" class="nav">
         <ul>
             <li><a href="#" onclick="hideDivById('inicio')">Inicio</a></li>
-            <li><a href="#" onclick="hideDivById('productos')">Tratamientos</a></li>
+            <li><a href="#" onclick="hideDivById('productos');loadAddDataFromTratamientoClient()">Tratamientos</a></li>
             <li><a href="#" onclick="hideDivById('about')">Conócenos</a></li>
             <li><a href="{{url_for('dashboard')}}">Contacto</a></li>
             <li><a href="{{url_for('dashboard')}}">Haz tu cita</a></li>
@@ -77,13 +77,13 @@
             <section class="footer-sections">
                 <header>Nosotros</header>
                 <a href="#" onclick="hideDivById('about')">Conócenos</a>
-                <a href="#" onclick="hideDivById('contacto')">Contacto</a>
+                <a href="{{url_for('dashboard')}}">Contacto</a>
                 <a href="#" onclick="hideDivById('inicio')">Inicio</a>
             </section>
             <section class="footer-sections">
                 <header>Servicios</header>
-                <a href="#" onclick="hideDivById('productos')">Tratamientos</a>
-                <a href="#" onclick="hideDivById('cita')">Haz tu cita</a>
+                <a href="#" onclick="hideDivById('productos');loadAddDataFromTratamientoClient()">Tratamientos</a>
+                <a href="{{url_for('dashboard')}}">Haz tu cita</a>
             </section>
             <section class="footer-sections">
                 <header>Nuestra redes</header>
