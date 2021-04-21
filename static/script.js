@@ -789,3 +789,38 @@ function modifyOffElementByIndexT(pIndexT, pSave) {
         localStorage.setItem("lAddTratamientoArray", JSON.stringify(addResultArrayT))
     }
 }
+
+//------------------------------------------------------------------------------
+function loadAddDataFromTratamientoClient() {
+
+    var addTratamientoArray = []
+
+    if (localStorage.getItem("lAddTratamientoArray") !== null) {
+        addTratamientoArray = JSON.parse(localStorage.getItem("lAddTratamientoArray"));
+    }
+
+    var tableTratamientos = document.getElementById("tableTratamientos")
+    var row
+    var indexT = 0;
+    //var tableIndex = addResultArray
+
+
+    //var addResultArrayT = JSON.parse(localStorage.getItem("lAddTratamientoArray"))
+    //var longT = addResultArrayT.length
+
+    var x = document.getElementById("tableTratamientos").rows.length;
+
+    if (x>1){
+        for (var i=1; i < x; i++ ){
+            document.getElementById("tableTratamientos").deleteRow(i)
+        }
+    }
+    for (var addResult of addTratamientoArray) {
+        row = tableTratamientos.insertRow(1)
+
+        row.insertCell(0).innerHTML = "<span id= 'columna1"+indexT+"'>" + addResult.nombreT+"</span>";
+        row.insertCell(1).innerHTML = "<span id= 'columna2"+indexT+"'>" + addResult.descripcionT+"</span>";
+        row.insertCell(2).innerHTML = "<span id= 'columna3"+indexT+"'>" + addResult.imagenT +"</span>";
+        indexT++
+    }
+} 
